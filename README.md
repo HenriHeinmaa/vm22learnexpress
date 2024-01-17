@@ -12,3 +12,5 @@
 `npm i kui node ara kustub`
 `node server.js`
 `kui liiga palju commite, siis .gitignore`
+
+## npm start
