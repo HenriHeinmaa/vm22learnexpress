@@ -14,3 +14,8 @@
 `kui liiga palju commite, siis .gitignore`
 
 ## npm start
+`node underscore taust`
+`kustuta node modules ja npm i`
+`nodemon lae`
+`extension nunjucks`
+`file.preferences,settings, include language, nunjucks, html,`
