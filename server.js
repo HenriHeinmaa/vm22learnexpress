@@ -37,6 +37,8 @@ app.get('/page2', (req, res) => {
     res.render("circleAnswer.njk" , {r: req.body.radius, a: area, d: diameter, v: volume });
   });
 
+  const movieController = require('./src/movieController');
+  app.use('/movies', movieController );
 
 
 app.listen(port, () => {

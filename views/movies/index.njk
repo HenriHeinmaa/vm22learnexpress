@@ -1,0 +1,33 @@
+{% extends "partials/layout.njk" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+  <a href="/movies/add">add</a>
+  <table>
+    <thead>
+  <th>name</th>
+  <th>year</th>
+    </thead>
+    <tbody>
+        {% for movie in movies %}
+        <tr>
+<td>{{movie.name}}</td>
+<td>{{movie.year}}</td>
+        
+        </tr>
+{% endfor %}
+    </tbody>
+  </table>
+
+
+
+   <ul>
+    {% for movie in movies %}
+    <li>{{ movie.name }}</li>
+    {% endfor %}
+   </ul>
+    {% endblock %}
