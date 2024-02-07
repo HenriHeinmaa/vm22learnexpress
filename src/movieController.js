@@ -13,7 +13,7 @@ router.get('/',(req, res) => {
     }
     let movies = fs.readFileSync('movies.json', 'utf-8');
     movies = JSON.parse(movies);
-    res.render('movies/index.njk', {movies: movies});
+    res.render('movies/index.njk', {movies: movies.movies});
 });
 
 router.get('/add',(req, res) => {
@@ -23,7 +23,7 @@ router.get('/add',(req, res) => {
 router.post('/add',(req, res) => {
     let movies = fs.readFileSync('movies.json', 'utf-8');
     movies = JSON.parse(movies);
-    movies.push({
+    movies.movies.push({
         id: movies.lastId++,
         name : req.body.movie,
         year : req.body.year,
