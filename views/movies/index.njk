@@ -9,8 +9,10 @@
   <a href="/movies/add">add</a>
   <table>
     <thead>
+      <th>ID</th>
   <th>name</th>
   <th>year</th>
+  <th>Actions</th>
     </thead>
     <tbody>
         {% for movie in movies %}
@@ -18,6 +20,11 @@
             <td>{{movie.id}}</td>
             <td>{{movie.name}}</td>
             <td>{{movie.year}}</td>
+            <td>
+              <a href="/movies/view?id={{movie.id}}">View</a>
+              <a href="/movies/edit/{{movie.id}}">Edit</a>
+              <a href="/movies/delete/{{movie.id}}">Delete</a>
+            </td>
         
         </tr>
 {% endfor %}
